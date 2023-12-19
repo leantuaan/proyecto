@@ -1355,11 +1355,11 @@ Estas prácticas proporcionan una base sólida para garantizar la seguridad en l
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 14. Optimización y Desempeño en Django
+#  Optimización y Desempeño en Django
 
 La optimización y el desempeño son aspectos críticos en el desarrollo de aplicaciones web para garantizar una experiencia de usuario rápida y eficiente. En el contexto de Django, hay varias estrategias y buenas prácticas que se pueden implementar para mejorar la velocidad y la eficiencia de una aplicación. A continuación, se detallan algunos aspectos clave:
 
-## 14.1 Caching
+## Caching
 
 El caching es una técnica que implica almacenar temporalmente ciertos datos para evitar el procesamiento repetitivo de operaciones costosas. Django ofrece un sistema de caching incorporado que se puede configurar para almacenar en caché resultados de consultas de bases de datos, vistas completas o fragmentos de contenido.
 
@@ -1376,7 +1376,7 @@ CACHES = {
 }
 ````
 
-# 14.2 Middleware de Compresión
+#  Middleware de Compresión
 Minimizar el tamaño de las respuestas HTTP puede mejorar significativamente el rendimiento. Django incluye un middleware de compresión que puede comprimir las respuestas antes de enviarlas al navegador del usuario.
 
 Ejemplo de configuración de compresión en settings.py:
@@ -1390,7 +1390,7 @@ MIDDLEWARE = [
 ]
 ````
 
-# 14.3 Consultas Eficientes a la Base de Datos
+#  Consultas Eficientes a la Base de Datos
 Optimizar las consultas a la base de datos es esencial para mejorar el rendimiento de una aplicación Django. Utilizar el método select_related o prefetch_related al realizar consultas a modelos con relaciones puede minimizar la cantidad de consultas necesarias.
 
 Ejemplo de consulta optimizada:
@@ -1410,7 +1410,7 @@ Utilizar herramientas de monitoreo y perfilado, como Django Debug Toolbar, puede
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 18. Problemas Comunes y Soluciones
+#  Problemas Comunes y Soluciones
 
 Este apartado aborda problemas comunes que los desarrolladores pueden enfrentar durante el desarrollo con Django y proporciona soluciones prácticas. A continuación, se detallan algunos de los problemas más frecuentes y cómo resolverlos:
 
@@ -1505,7 +1505,7 @@ Estos recursos te proporcionarán una base sólida y te ayudarán a explorar asp
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-### 21. Django Testing Tools
+###  Django Testing Tools
 
 Django proporciona un conjunto integral de herramientas de prueba que permiten a los desarrolladores garantizar que sus aplicaciones funcionan correctamente y cumplen con los requisitos especificados. Más allá de las pruebas unitarias básicas, existen herramientas avanzadas que facilitan la escritura y ejecución de pruebas más complejas.
 
@@ -1534,7 +1534,7 @@ pip install pytest pytest-django
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-### 25. Django y Machine Learning:
+###  Django y Machine Learning:
 
 Django y el aprendizaje automático (Machine Learning) pueden combinarse para crear aplicaciones más inteligentes y predictivas. Integrar modelos de machine learning en una aplicación Django puede ofrecer funcionalidades avanzadas y personalizadas. Aquí hay una guía básica sobre cómo hacerlo:
 
