@@ -1,0 +1,1283 @@
+---
+title: DJANGO PYTHON
+created: '2023-11-21T09:58:29.921Z'
+modified: '2023-11-21T11:43:33.791Z'
+---
+
+## DJANGO PYTHON
+
+# Introducción
+
+Django es un framework de desarrollo web de código abierto escrito en Python que sigue el principio "don't repeat yourself" (DRY) y favorece la rápida creación y desarrollo de aplicaciones web robustas y mantenibles. Su principal objetivo es facilitar la construcción de sitios web complejos al proporcionar una estructura organizada y predefinida.
+
+- Características Clave de Django:
+
+- MVC (Modelo-Vista-Controlador): Django sigue el patrón de diseño MVC, lo que significa que separa la lógica de la aplicación en modelos, vistas y controladores para mejorar la modularidad y escalabilidad.
+
+- ORM (Mapeo Objeto-Relacional): Django utiliza un ORM que permite interactuar con la base de datos utilizando objetos en Python en lugar de consultas SQL directas.
+
+- Admin Site Incorporado: Proporciona un panel de administración automático para gestionar modelos y datos de manera eficiente.
+
+- Sistema de Plantillas: Django incluye un sistema de plantillas para la presentación de datos de manera sencilla y dinámica en las vistas.
+
+- Seguridad Integrada: Viene con medidas de seguridad incorporadas para proteger contra amenazas comunes como ataques de inyección SQL, CSRF, entre otros.
+
+- Uso de Django:
+Django se utiliza ampliamente en el desarrollo de aplicaciones web de todo tipo, desde sitios web simples hasta plataformas complejas. Su estructura y conjunto de características lo hacen especialmente útil para proyectos que requieren escalabilidad, mantenibilidad y seguridad.
+
+- Importancia de la Instalación Correcta:
+La instalación correcta de Django es crucial para iniciar un proyecto de desarrollo web de manera exitosa. Algunas razones para una instalación precisa incluyen:
+
+- Configuración del Entorno de Desarrollo: La instalación adecuada garantiza que tu entorno de desarrollo esté configurado correctamente, incluyendo la versión correcta de Python y otras dependencias.
+
+- Acceso a Herramientas y Funcionalidades: Una instalación correcta proporciona acceso a las herramientas y funcionalidades de Django, lo que facilita el desarrollo y la implementación de características avanzadas.
+
+- Prevención de Problemas: Una instalación incorrecta puede dar lugar a errores y problemas durante el desarrollo, afectando la eficiencia y la calidad del código.
+
+-Compatibilidad: Asegurarse de que todos los componentes estén instalados correctamente garantiza la compatibilidad con las versiones de Django y sus dependencias.
+
+
+## 2.1. Linux
+
+# Requisitos previos:
+
+-Python:
+
+- Asegúrate de tener Python instalado. Django requiere Python 3.6 o superior. Puedes verificar la versión de Python con el siguiente comando:
+
+`````console
+
+
+python3 --version
+
+``````
+
+- Si no tienes Python instalado, puedes hacerlo usando el siguiente comando:
+`````console
+
+
+sudo apt update
+sudo apt install python3
+
+``````
+
+- pip (administrador de paquetes de Python):
+
+Django se instala a través de pip. Asegúrate de tener pip instalado:
+
+
+`````console
+
+
+sudo apt install python3-pip
+
+``````
+
+- Instalación de Django:
+Entorno Virtual (Opcional pero Recomendado):
+
+- Se recomienda crear un entorno virtual para tu proyecto Django para aislar las dependencias. Puedes instalar el paquete venv:
+
+`````console
+
+
+sudo apt install python3-venv
+
+``````
+
+- Crear un Entorno Virtual (Opcional):
+
+Navega al directorio de tu proyecto y crea un entorno virtual:
+`````console
+
+mkdir mi_proyecto
+cd mi_proyecto
+python3 -m venv venv
+
+``````
+
+- Activar el Entorno Virtual:
+
+Activa el entorno virtual antes de instalar Django: 
+
+`````console
+
+
+source venv/bin/activate
+
+``````
+
+- Instalar Django:
+
+Una vez que el entorno virtual esté activado, puedes instalar Django usando pip:
+`````console
+
+
+pip install django
+
+``````
+- Verificar la Instalación:
+
+Puedes verificar que Django se instaló correctamente ejecutando el siguiente comando:
+`````console
+
+
+python -m django --version
+
+``````
+- Con estos pasos, deberías tener Django instalado en tu entorno Linux. Recuerda que si estás utilizando un entorno virtual, debes activarlo cada vez que trabajes en tu proyecto:
+`````console
+
+source venv/bin/activate
+
+``````
+
+## 2.2. Windows
+
+#  Requisitos previos.
+
+Python:
+
+- Django requiere Python. Puedes descargar la última versión de Python para Windows desde el sitio oficial python.org.
+
+- Durante la instalación, asegúrate de marcar la opción "Add Python to PATH" para que Python pueda ser reconocido en la línea de comandos.
+
+PIP (Administrador de Paquetes de Python):
+
+- La instalación de Python generalmente incluye PIP. Puedes verificar si está instalado ejecutando el siguiente comando en la línea de comandos:
+`````console
+
+pip --version
+``````
+- Instalación de Django:
+Abrir la Línea de Comandos:
+
+Abre la línea de comandos de Windows. Puedes hacerlo buscando "cmd" en el menú de inicio.
+
+- Instalación de Django:
+
+Utiliza pip para instalar Django. Ejecuta el siguiente comando:
+`````console
+
+pip install django
+``````
+Asegúrate de ejecutar el comando con permisos de administrador si es necesario.
+
+- Verificar la Instalación:
+
+Una vez completada la instalación, puedes verificar si Django se instaló correctamente con el siguiente comando:
+`````console
+
+python -m django --version
+
+``````
+
+Con estos pasos, deberías tener Django instalado en tu entorno de desarrollo en Windows. 
+
+
+# Configuración del entorno virtual.
+
+Instalación de virtualenv (si no está instalado):
+
+- Puedes instalar virtualenv utilizando PIP con el siguiente comando:
+`````console
+
+pip install virtualenv
+``````
+Crear un Nuevo Proyecto:
+
+- Navega al directorio donde quieras crear tu proyecto Django usando el comando cd. Por ejemplo:
+`````console
+
+cd C:\Ruta\Hacia\Tu\Proyecto
+``````
+Creación de un Entorno Virtual:
+
+- Dentro del directorio de tu proyecto, crea un entorno virtual con el siguiente comando:
+`````console
+
+python -m venv venv
+``````
+Activación del Entorno Virtual:
+
+- Activa el entorno virtual ejecutando el siguiente comando:
+`````console
+
+.\venv\Scripts\activate
+``````
+Verificación de la Instalación:
+
+- Puedes verificar que Django se ha instalado correctamente con el siguiente comando:
+`````console
+
+python -m django --version
+``````
+
+Desactivación del Entorno Virtual:
+
+- Cuando hayas terminado de trabajar en tu proyecto, puedes desactivar el entorno virtual con el siguiente comando:
+`````console
+
+deactivate
+``````
+
+# Sintaxis Básica de Django
+
+## Estructura de un proyecto Django.
+
+Estructura Básica de un Proyecto Django:
+`````console
+
+- manage.py:
+``````
+Este archivo es un script de línea de comandos que te ayuda a interactuar con tu proyecto Django. Puedes usarlo para realizar tareas como ejecutar el servidor de desarrollo, aplicar migraciones y más.
+`````console
+
+- requirements.txt:
+``````
+Un archivo que lista todas las dependencias del proyecto. Puedes generar este archivo con pip freeze > requirements.txt para compartir fácilmente las dependencias con otros desarrolladores.
+`````console
+
+- venv/ o virtualenv/ (Opcional):
+``````
+Directorio que contiene el entorno virtual del proyecto. Es recomendable utilizar un entorno virtual para aislar las dependencias de un proyecto específico.
+`````console
+
+- project_name/:
+``````
+Este directorio contiene los archivos específicos del proyecto y suele tener el mismo nombre que el proyecto. Algunos archivos y subdirectorios clave incluyen:
+`````console
+
+__init__.py:
+``````
+Un archivo vacío que indica a Python que este directorio debe ser considerado un paquete.
+`````console
+
+- settings.py:
+``````
+Configuración del proyecto, que incluye la configuración de la base de datos, configuración del servidor, claves secretas y más.
+`````console
+
+- urls.py:
+``````
+Define las URL del proyecto, especificando cómo se deben manejar las solicitudes.
+`````console
+
+- wsgi.py:
+``````
+Configuración para el servidor WSGI (Web Server Gateway Interface), utilizado para servir la aplicación en entornos de producción.
+`````console
+
+- asgi.py:
+``````
+Configuración para el servidor ASGI (Asynchronous Server Gateway Interface), utilizado para entornos asincrónicos.
+`````console
+
+- apps/:
+``````
+Directorio que contiene las aplicaciones de Django. Cada aplicación es un módulo independiente y reutilizable que puede ser compartido entre proyectos. Dentro de cada aplicación, puedes tener la siguiente estructura:
+`````console
+
+__init__.py:
+``````
+Archivo vacío que indica que este directorio debe considerarse un paquete.
+`````console
+
+- admin.py:
+``````
+Configuración para la interfaz de administración de Django.
+`````console
+
+- apps.py:
+``````
+Configuración específica de la aplicación.
+`````console
+
+- models.py:
+``````
+Define los modelos de datos para la aplicación.
+`````console
+
+- views.py:
+``````
+Contiene las funciones o clases de vista que manejan las solicitudes y generan las respuestas.
+`````console
+
+- urls.py:
+``````
+Define las URL específicas de la aplicación.
+`````console
+
+- tests/:
+``````
+Directorio para pruebas de la aplicación.
+`````console
+
+- migrations/:
+``````
+Directorio que contiene archivos de migración de la base de datos generados por Django.
+`````console
+
+- static/ y templates/:
+``````
+Directorios para almacenar archivos estáticos (como CSS, JavaScript) y plantillas HTML utilizadas por la aplicación.
+`````console
+
+- media/:
+``````
+Directorio opcional para almacenar archivos multimedia cargados por los usuarios (imágenes, archivos, etc.).
+`````console
+
+- db.sqlite3 (o el nombre de tu base de datos):
+``````
+El archivo de la base de datos SQLite que se utiliza de manera predeterminada en proyectos Django nuevos.
+`````console
+
+- migrations/:
+``````
+
+Directorio global que contiene archivos de migración para la base de datos del proyecto.
+`````console
+
+- staticfiles/:
+``````
+Directorio que contiene los archivos estáticos recolectados para producción (cuando se utiliza el comando collectstatic).
+`````console
+
+my_project/
+│
+├── manage.py
+├── requirements.txt
+├── venv/
+├── my_project/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+│   └── asgi.py
+│
+├── apps/
+│   ├── my_app/
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── models.py
+│   │   ├── views.py
+│   │   ├── urls.py
+│   │   ├── tests/
+│   │   └── migrations/
+│   │
+│   └── another_app/
+│       ├── __init__.py
+│       ├── admin.py
+│       ├── apps.py
+│       ├── models.py
+│       ├── views.py
+│       ├── urls.py
+│       ├── tests/
+│       └── migrations/
+│
+├── static/
+├── templates/
+├── media/
+├── db.sqlite3
+├── migrations/
+└── staticfiles/
+
+``````
+
+
+
+## Creación y configuración de una aplicación Django.
+
+- Abre la Terminal o CMD:
+
+- Abre la terminal o el símbolo del sistema en el directorio de tu proyecto Django.
+Crea la Aplicación:
+
+- Utiliza el siguiente comando para crear una nueva aplicación. Reemplaza nombre_de_la_aplicacion con el nombre que deseas para tu aplicación.
+`````console
+
+python manage.py startapp nombre_de_la_aplicacion
+``````
+- o si estás usando Python 3:
+`````console
+
+python3 manage.py startapp nombre_de_la_aplicacion
+``````
+- Configuración de la Aplicación Django:
+- Agrega la Aplicación al Archivo settings.py:
+
+- Abre el archivo settings.py en el directorio principal de tu proyecto.
+
+- Busca la sección INSTALLED_APPS y agrega el nombre de tu aplicación:
+`````console
+
+INSTALLED_APPS = [
+    # Otras aplicaciones aquí...
+    'nombre_de_la_aplicacion',
+]
+``````
+- Define los Modelos en models.py:
+
+- En el directorio de tu aplicación, abre el archivo models.py.
+
+- Define los modelos que representarán los datos de tu aplicación. Por ejemplo:
+`````console
+
+from django.db import models
+
+class MiModelo(models.Model):
+    campo1 = models.CharField(max_length=100)
+    campo2 = models.IntegerField()
+
+    def __str__(self):
+        return self.campo1
+``````
+- Realiza Migraciones:
+
+- Ejecuta el siguiente comando para crear las migraciones basadas en tus modelos:
+`````console
+
+
+python manage.py makemigrations
+
+``````
+- o para Python 3:
+
+python3 manage.py makemigrations
+
+- Después, aplica las migraciones para crear las tablas en la base de datos:
+`````console
+
+python manage.py migrate
+``````
+- o para Python 3:
+`````console
+
+python3 manage.py migrate
+``````
+- Crea las Vistas en views.py:
+
+- En el directorio de tu aplicación, abre el archivo views.py.
+
+- Define las funciones de vista o clases de vista que manejarán las solicitudes y generarán respuestas.
+`````console
+from django.shortcuts import render
+from django.http import HttpResponse
+
+def mi_vista(request):
+    return HttpResponse("¡Hola desde la aplicación!")
+``````
+- Configura las URLs en urls.py:
+
+- Crea un archivo urls.py en el directorio de tu aplicación.
+
+- Define las URL y vincula las vistas que has creado.
+`````console
+from django.urls import path
+from .views import mi_vista
+
+urlpatterns = [
+    path('mi-ruta/', mi_vista, name='mi-vista'),
+]
+``````
+- Conecta las URLs de la Aplicación en el Proyecto:
+
+- Abre el archivo urls.py en el directorio principal de tu proyecto.
+
+- Importa las vistas de tu aplicación y añade un path que incluya las URLs de tu aplicación.
+`````console
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('mi-aplicacion/', include('nombre_de_la_aplicacion.urls')),
+]
+`````
+- Con estos pasos, has creado y configurado una aplicación Django en tu proyecto. Puedes continuar definiendo más vistas, templates, y archivos estáticos según las necesidades de tu aplicación. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Archivos clave: settings.py, urls.py, etc.
+
+settings.py: Este archivo se encuentra en la carpeta del proyecto y contiene la configuración principal de tu aplicación Django. Algunas de las configuraciones clave que puedes encontrar en este archivo incluyen:
+
+Configuración de la base de datos (DATABASES).
+Configuración de rutas estáticas y archivos multimedia.
+Configuración de aplicaciones instaladas.
+Configuración del tiempo y zona horaria.
+Configuración de la clave secreta (SECRET_KEY).
+Configuración de la aplicación de autenticación.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+urls.py: Este archivo se encuentra en la carpeta de cada aplicación y se utiliza para definir las rutas URL de la aplicación.
+También puedes tener un archivo urls.py en la carpeta del proyecto principal para incluir las rutas de todas las aplicaciones.
+Ejemplo de un archivo urls.py de una aplicación:
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+models.py: Este archivo, ubicado en la carpeta de cada aplicación, se utiliza para definir los modelos de datos. 
+Cada modelo representa una tabla en la base de datos y define los campos y relaciones.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+forms.py: Este archivo, ubicado en la carpeta de cada aplicación, se utiliza para definir formularios. Los formularios son útiles para la entrada de datos en las vistas.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+views.py: Este archivo, ubicado en la carpeta de cada aplicación, contiene las funciones de vista que manejan las solicitudes HTTP. Las vistas interactúan con los modelos y renderizan plantillas.
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+admin.py: Este archivo se encuentra en la carpeta de cada aplicación y se utiliza para personalizar la interfaz de administración de Django. Puedes registrar tus modelos aquí para que sean administrables a través de la interfaz de administración de Django.
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+middleware.py: Django utiliza middleware para procesar las solicitudes antes de llegar a las vistas y para procesar las respuestas antes de enviarse al navegador. Puedes definir middleware personalizado para realizar acciones específicas en cada solicitud o respuesta.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+## Estructuras de Control en Django
+
+
+- En Django, las estructuras de control se utilizan principalmente en los archivos de plantillas (templates) para controlar la lógica de presentación y renderizar dinámicamente contenido en las páginas web. Aquí hay algunas de las estructuras de control más comunes que puedes utilizar en las plantillas de Django:
+
+1 Bloques {% block %} ... {% endblock %}:
+Los bloques se utilizan para definir secciones que pueden ser sobrescritas en las plantillas hijas. La plantilla base (base.html) puede contener bloques que las plantillas hijas pueden extender y personalizar.
+```console
+<!-- En base.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Mi Sitio{% endblock %}</title>
+</head>
+<body>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
+
+<!-- En una plantilla hija -->
+{% extends "base.html" %}
+
+{% block title %}Página de Inicio{% endblock %}
+
+{% block content %}
+    <h1>Bienvenido a mi sitio</h1>
+    <p>Contenido de la página de inicio...</p>
+{% endblock %}
+`````
+-------------------------------------------------------------------
+2 Ciclos {% for %} ... {% endfor %}:
+Los ciclos permiten iterar sobre listas o conjuntos de datos y mostrar contenido repetido.
+```console
+<ul>
+    {% for item in lista %}
+        <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+
+3. Condicionales {% if %} ... {% endif %}:
+Los condicionales se utilizan para mostrar contenido basado en condiciones.
+
+{% if usuario.is_authenticated %}
+    <p>Bienvenido, {{ usuario.username }}.</p>
+{% else %}
+    <p>Inicia sesión para acceder al contenido.</p>
+{% endif %}
+
+````
+--------------------------------------------------------------------
+
+4. Filtrado de Contenido {{ variable|filter }}:
+Puedes utilizar filtros para modificar el contenido de las variables antes de mostrarlo.
+```console
+<p>{{ texto|truncatewords:20 }}</p>
+````
+--------------------------------------------------------------------------
+
+Estas son solo algunas de las estructuras de control que puedes usar en las plantillas de Django. 
+
+
+
+## Uso de templates para controlar la presentación.
+
+1. Sintaxis Básica de Templates:
+Los templates de Django utilizan una sintaxis especial entre llaves dobles y porcentaje ({{ }} y {% %}) para incorporar lógica y variables:
+```console
+<p>{{ nombre_usuario }}</p>
+````
+----------------------------------------------------------------------------
+
+Tags de Control ({% %}):
+```console
+{% if usuario.is_authenticated %}
+    <p>Bienvenido, {{ usuario.username }}.</p>
+{% else %}
+    <p>Inicia sesión para acceder al contenido.</p>
+{% endif %}
+````
+-------------------------------------------------------------------------------
+
+2. Estructuras de Control en Templates:
+Ciclos ({% for %}):
+```console
+
+<ul>
+    {% for item in lista %}
+        <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+````
+-------------------------------------------------------------------------------
+
+Bloques ({% block %}):
+```console
+{% block content %}
+    <h1>Contenido de la página</h1>
+{% endblock %}
+````
+----------------------------------------------------------------------------------
+
+Inclusión de Plantillas ({% include %}):
+```console
+{% include "mi_fragmento.html" %}
+````
+----------------------------------------------------------------------------------
+
+3. Filtros:
+Los filtros se utilizan para modificar el contenido de las variables antes de ser mostradas:
+```console
+<p>{{ texto|truncatewords:20 }}</p>
+````
+--------------------------------------------------------------------------------------
+
+4. Herencia de Plantillas:
+Puedes definir una plantilla base con bloques que luego pueden ser extendidos por otras plantillas hijas:
+
+Plantilla Base (base.html):
+```console
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Mi Sitio{% endblock %}</title>
+</head>
+<body>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
+
+````
+---------------------------------------------------------------------------------------------
+
+
+Plantilla Hija (mi_pagina.html):
+```console
+{% extends "base.html" %}
+
+{% block title %}Página de Inicio{% endblock %}
+
+{% block content %}
+    <h1>Bienvenido a mi sitio</h1>
+    <p>Contenido de la página de inicio...</p>
+{% endblock %}
+````
+---------------------------------------------------------------------------------------------
+
+5. Comentarios:
+Añadir comentarios en los templates para mejorar la lectura:
+```console
+{# Esto es un comentario en Django #}
+````
+---------------------------------------------------------------------------------------------
+
+6. Variables Contextuales:
+Las variables son proporcionadas por las vistas de Django y se pueden utilizar en los templates para mostrar datos dinámicos:
+
+ En la vista de Django
+def mi_vista(request):
+```console
+    return render(request, 'mi_pagina.html', {'nombre_usuario': 'John'})
+
+    <!-- En mi_pagina.html -->
+<p>Bienvenido, {{ nombre_usuario }}.</p>
+
+````
+------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+## Vistas y plantillas.
+
+
+- Funciones de Vista:
+
+from django.shortcuts import render
+
+def mi_vista(request):
+    return render(request, 'mi_template.html')
+
+
+----------------------------------------------------------------------------------------------
+
+Clases de Vista (basadas en clases):
+
+```console
+from django.views import View
+from django.shortcuts import render
+
+class MiVista(View):
+    def get(self, request):
+        return render(request, 'mi_template.html')
+````
+-----------------------------------------------------------------------------------------------
+
+Parámetros de la Solicitud (request):
+
+La solicitud es un objeto que contiene información sobre la solicitud HTTP, como los parámetros GET, POST y otros detalles.
+
+-----------------------------------------------------------------------------------------------
+
+Datos del Contexto:
+
+Puedes pasar datos a la plantilla mediante el contexto.
+
+```console
+
+def mi_vista(request):
+    contexto = {'nombre_usuario': 'John'}
+    return render(request, 'mi_template.html', contexto)
+````
+------------------------------------------------------------------------------------------------
+
+Renderización de Plantillas:
+
+render() se utiliza para renderizar una plantilla y devolver una respuesta HTTP.
+```console
+
+return render(request, 'mi_template.html')
+
+````
+------------------------------------------------------------------------------------------------
+
+
+Plantillas en Django:
+Las plantillas en Django son archivos HTML con lógica adicional incorporada que permite la presentación dinámica de datos.
+
+Variables ({{ variable }}):
+
+Muestra el valor de una variable proporcionada por la vista.
+```console
+<p>Bienvenido, {{ nombre_usuario }}.</p>
+
+````
+-------------------------------------------------------------------------------------------------
+
+Tags de Control ({% %}):
+
+Permiten la ejecución de estructuras de control como condicionales y bucles.
+
+```console
+
+{% if usuario.is_authenticated %}
+    <p>Bienvenido, {{ usuario.username }}.</p>
+{% else %}
+    <p>Inicia sesión para acceder al contenido.</p>
+{% endif %}
+
+````
+
+-------------------------------------------------------------------------------------------------
+
+iclos ({% for %}):
+
+Permite iterar sobre listas o conjuntos de datos.
+
+```console
+
+<ul>
+    {% for item in lista %}
+        <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+
+
+`````
+
+
+-------------------------------------------------------------------------------------------------
+
+
+Inclusión de Plantillas ({% include %}):
+
+Permite incluir el contenido de otras plantillas.
+```console
+{% include "mi_fragmento.html" %}
+````
+-------------------------------------------------------------------------------------------------
+
+Filtros ({{ variable|filter }}):
+
+Modifican el contenido de las variables antes de mostrarlas.
+```console
+<p>{{ texto|truncatewords:20 }}</p>
+
+````
+-------------------------------------------------------------------------------------------------
+
+Herencia de Plantillas ({% extends %} y {% block %}):
+
+Permite crear plantillas base y extenderlas en plantillas hijas.
+```console
+<!-- En la plantilla base -->
+{% block content %}
+    <h1>Contenido de la página</h1>
+{% endblock %}
+````
+
+--------------------------------------------------------------------------------------------------
+
+## Bucles en Django
+
+- En Django, los bucles se utilizan en las plantillas para iterar sobre secuencias de datos, como listas, conjuntos o consultas de la base de datos. Aquí te muestro cómo puedes utilizar bucles en las plantillas de Django:
+
+- Sintaxis del Bucle {% for %}:
+El bucle {% for %} permite iterar sobre una secuencia de elementos. La sintaxis básica es la siguiente:
+```console
+<ul>
+  {% for item in lista %}
+    <li>{{ item }}</li>
+  {% endfor %}
+</ul>
+````
+-----------------------------------------------------------------------------------------------------
+
+Ejemplo con un Diccionario:
+```console
+<ul>
+  {% for key, value in mi_diccionario.items %}
+    <li>{{ key }}: {{ value }}</li>
+  {% endfor %}
+</ul>
+````
+------------------------------------------------------------------------------------------------------
+
+
+Ciclos Anidados:
+Puedes anidar bucles para iterar sobre estructuras de datos más complejas:
+```console
+<ul>
+  {% for category, products in categorias.items %}
+    <li>{{ category }}</li>
+    <ul>
+      {% for product in products %}
+        <li>{{ product.name }}</li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</ul>
+
+````
+-------------------------------------------------------------------------------------------------------
+
+
+Bucle con Filtros:
+Puedes combinar bucles con filtros para realizar acciones específicas. Por ejemplo, puedes utilizar el filtro slice para mostrar solo los primeros tres elementos de una lista:
+```console
+<ul>
+  {% for item in lista|slice:":3" %}
+    <li>{{ item }}</li>
+  {% endfor %}
+</ul>
+````
+-------------------------------------------------------------------------------------------------------
+
+Condiciones en el Bucle:
+Puedes usar condiciones dentro del bucle para mostrar elementos que cumplen ciertas condiciones:
+```console
+<ul>
+  {% for item in lista %}
+    {% if item|length > 5 %}
+      <li>{{ item }}</li>
+    {% endif %}
+  {% endfor %}
+</ul>
+````
+
+------------------------------------------------------------------------------------------------------
+
+
+
+## Uso de bucles en las plantillas para mostrar datos.
+
+Definición de Bloques en la Plantilla Base:
+En la plantilla base (por ejemplo, base.html), defines bloques con la etiqueta {% block %}:
+```console
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Mi Sitio{% endblock %}</title>
+</head>
+<body>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
+
+````
+En este ejemplo, la plantilla base tiene dos bloques: title y content. Los bloques actúan como áreas reservadas que pueden ser llenadas con contenido específico en las plantillas hijas.
+
+---------------------------------------------------------------------------------------------------
+
+Extensión en Plantilla Hija:
+En una plantilla hija (por ejemplo, mi_pagina.html), puedes extender la plantilla base y sobrescribir o agregar contenido a los bloques:
+```console
+{% extends "base.html" %}
+
+{% block title %}Página de Inicio{% endblock %}
+
+{% block content %}
+    <h1>Bienvenido a mi sitio</h1>
+    <p>Contenido de la página de inicio...</p>
+{% endblock %}
+````
+-----------------------------------------------------------------------------------------------------
+
+3 Uso de Datos Dinámicos:
+Puedes incluir datos dinámicos en los bloques utilizando variables de contexto proporcionadas por las vistas de Django. Por ejemplo, en tu vista de Django:
+```console
+def mi_vista(request):
+    contexto = {'nombre_usuario': 'John'}
+    return render(request, 'mi_pagina.html', contexto)
+
+- Y en tu plantilla (mi_pagina.html):
+
+{% extends "base.html" %}
+
+{% block title %}Página de Inicio de {{ nombre_usuario }}{% endblock %}
+
+{% block content %}
+    <h1>Bienvenido, {{ nombre_usuario }}</h1>
+    <p>Contenido de la página de inicio...</p>
+{% endblock %}
+````
+-------------------------------------------------------------------------------------------------------
+
+
+
+
+-------------------------------------------------------------------------------------------------------
+
+detalle_producto.html:
+```console
+<h2>{{ producto.nombre }}</h2>
+<p>Precio: {{ producto.precio }}</p>
+````
+
+-------------------------------------------------------------------------------------------------------
+
+nuevo_producto.html:
+```console
+<h2>Nuevo Producto</h2>
+<form method="post" action="{% url 'nuevo_producto' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Guardar</button>
+</form>
+
+````
+-------------------------------------------------------------------------------------------------------
+
+editar_producto.html:
+```console
+<h2>Editar Producto</h2>
+<form method="post" action="{% url 'editar_producto' producto.id %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Guardar cambios</button>
+</form>
+````
+-------------------------------------------------------------------------------------------------------
+
+URL Principal:
+Incluye las URLs de la aplicación en la URL principal de tu proyecto.
+```console
+ En urls.py del proyecto
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('mi_aplicacion/', include('mi_aplicacion.urls')),
+]
+
+````
+-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Configurar Zona Horaria (Opcional):
+Si deseas configurar la zona horaria de tu base de datos, puedes añadir la siguiente línea a la configuración de la base de datos:
+
+```console
+- En settings.py
+'TIME_ZONE': 'UTC',
+````
+-------------------------------------------------------------------------------------------------------
+
+ Aplicar Migraciones:
+Después de configurar la base de datos, realiza las migraciones para aplicar los cambios en la estructura de la base de datos.
+
+```console
+
+python manage.py makemigrations
+python manage.py migrate
+
+````
+
+-------------------------------------------------------------------------------------------------------
+
+
+
+
+
+# CRUD con MYSQL
+
+Primero, crea un nuevo proyecto y una aplicación dentro de ese proyecto.
+```console
+pip install django
+django-admin startproject mi_proyecto
+cd mi_proyecto
+python manage.py startapp mi_app
+
+```
+---------------------------------------------------------------------------------------------------------
+
+Abre el archivo settings.py dentro de tu proyecto y configura la conexión a MySQL.
+
+```console
+ settings.py
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'nombre_de_tu_base_de_datos',
+        'USER': 'tu_usuario_mysql',
+        'PASSWORD': 'tu_contraseña_mysql',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
+
+```
+------------------------------------------------------------------------------------------------------------
+
+En el archivo models.py de tu aplicación, define el modelo de datos que representará la entidad que deseas gestionar. Por ejemplo, supongamos que estamos gestionando libros.
+
+```console
+mi_app/models.py
+
+from django.db import models
+
+class Libro(models.Model):
+    titulo = models.CharField(max_length=200)
+    autor = models.CharField(max_length=100)
+    publicacion = models.DateField()
+
+    def __str__(self):
+        return self.titulo
+```
+------------------------------------------------------------------------------------------------------------------
+
+Ejecuta los siguientes comandos para aplicar las migraciones y crear la tabla en la base de datos.
+```console
+python manage.py makemigrations
+python manage.py migrate
+```
+
+-------------------------------------------------------------------------------------------------------------------
+
+En el archivo views.py de tu aplicación, define las vistas para realizar las operaciones CRUD.
+
+```console
+ mi_app/views.py
+
+from django.shortcuts import render, get_object_or_404
+from .models import Libro
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+from .forms import LibroForm
+
+def lista_libros(request):
+    libros = Libro.objects.all()
+    return render(request, 'mi_app/lista_libros.html', {'libros': libros})
+
+def detalle_libro(request, libro_id):
+    libro = get_object_or_404(Libro, pk=libro_id)
+    return render(request, 'mi_app/detalle_libro.html', {'libro': libro})
+
+def agregar_libro(request):
+    if request.method == 'POST':
+        form = LibroForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('mi_app:lista_libros'))
+    else:
+        form = LibroForm()
+    return render(request, 'mi_app/agregar_libro.html', {'form': form})
+
+def editar_libro(request, libro_id):
+    libro = get_object_or_404(Libro, pk=libro_id)
+    if request.method == 'POST':
+        form = LibroForm(request.POST, instance=libro)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('mi_app:lista_libros'))
+    else:
+        form = LibroForm(instance=libro)
+    return render(request, 'mi_app/editar_libro.html', {'form': form, 'libro': libro})
+
+def eliminar_libro(request, libro_id):
+    libro = get_object_or_404(Libro, pk=libro_id)
+    libro.delete()
+    return HttpResponseRedirect(reverse('mi_app:lista_libros'))
+```
+--------------------------------------------------------------------------------------------------------------
+
+Crea un archivo forms.py en tu aplicación para definir los formularios necesarios.
+```console
+ mi_app/forms.py
+
+from django import forms
+from .models import Libro
+
+class LibroForm(forms.ModelForm):
+    class Meta:
+        model = Libro
+        fields = ['titulo', 'autor', 'publicacion']
+```
+---------------------------------------------------------------------------------------------------------------
+
+En el archivo urls.py de tu aplicación, configura las URL para las vistas creadas.
+```console
+ mi_app/urls.py
+
+from django.urls import path
+from . import views
+
+app_name = 'mi_app'
+
+urlpatterns = [
+    path('libros/', views.lista_libros, name='lista_libros'),
+    path('libros/<int:libro_id>/', views.detalle_libro, name='detalle_libro'),
+    path('libros/agregar/', views.agregar_libro, name='agregar_libro'),
+    path('libros/editar/<int:libro_id>/', views.editar_libro, name='editar_libro'),
+    path('libros/eliminar/<int:libro_id>/', views.eliminar_libro, name='eliminar_libro'),
+]
+
+```
+
+---------------------------------------------------------------------------------------------------------------------
+
+Asegúrate de incluir las URLs de tu aplicación en el archivo urls.py del proyecto.
+```console
+ mi_proyecto/urls.py
+
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('mi_app/', include('mi_app.urls')),
+]
+```
+------------------------------------------------------------------------------------------------------------------------
+
+Crea las plantillas HTML en la carpeta templates/mi_app/ para cada una de las vistas que has definido.
+```console
+lista_libros.html
+detalle_libro.html
+agregar_libro.html
+editar_libro.html
+Puedes usar el sistema de plantillas de Django para renderizar los datos y formularios.
+
+````
+
+------------------------------------------------------------------------------------------------------------------------
+
+Finalmente, ejecuta el servidor de desarrollo de Django.
+
+python manage.py runserver
+
+-------------------------------------------------------------------------------------------------------------------------
+
+Abre tu navegador y visita http://localhost:8000/mi_app/libros/ para ver la lista de libros y comenzar a realizar operaciones CRUD.
+
+------------------------------------------------------------------------------------------------------------------------------
+
+# Conclusiones
+
+## Recapitulación de los conceptos aprendidos.
+
+- Django es un potente framework web de Python que facilita el desarrollo rápido y limpio de aplicaciones web. A continuación, se presentan algunas conclusiones y una recapitulación de los conceptos aprendidos sobre Django:
+
+- Modelo-Vista-Controlador (MVC): Django sigue una arquitectura de tipo Modelo-Vista-Plantilla (MVT). Los modelos definen la estructura de la base de datos, las vistas manejan la lógica de negocio y las plantillas se encargan de la presentación.
+
+- Modelos en Django: Los modelos son clases de Python que definen la estructura de la base de datos. Se utilizan para realizar operaciones CRUD y están vinculados a tablas en la base de datos.
+
+- Migraciones: Django utiliza migraciones para gestionar la evolución del esquema de la base de datos a medida que cambian los modelos. Las migraciones se crean y aplican utilizando comandos como makemigrations y migrate.
+
+- Vistas en Django: Las vistas son funciones o clases que manejan las solicitudes HTTP. Se encargan de la lógica de la aplicación y devuelven respuestas que pueden ser páginas HTML, JSON u otros formatos.
+
+- URLs en Django: Las URLs se utilizan para mapear las solicitudes HTTP a funciones o clases de vista específicas. La configuración de las URLs se realiza en archivos como urls.py.
+
+- Plantillas en Django: Las plantillas se utilizan para generar HTML dinámico. Django proporciona un sistema de plantillas que permite la incorporación de lógica en las páginas HTML.
+
+- Formularios en Django: Los formularios facilitan la entrada de datos del usuario y su validación. Los formularios en Django se definen mediante clases de Python y se pueden renderizar en las plantillas.
+
+- Admin de Django: Django proporciona una interfaz de administración automática basada en modelos. Esto facilita la gestión de los datos de la aplicación sin tener que crear manualmente una interfaz administrativa.
+
+- Middleware: El middleware en Django es una capa de procesamiento que se ejecuta antes o después de una vista. Puede utilizarse para realizar tareas como autenticación, compresión, y más.
+
+- Configuración de la Base de Datos: Django permite configurar diferentes motores de base de datos. MySQL, PostgreSQL y SQLite son opciones comunes. La configuración se realiza en el archivo settings.py.
+
+- Manejo de Errores y Excepciones: Django proporciona mecanismos para manejar errores y excepciones, lo que facilita la creación de aplicaciones robustas.
+
+- Seguridad en Django: Django incluye características de seguridad incorporadas para proteger contra ataques comunes como inyección de SQL, ataques CSRF y más.
+
+- Testing en Django: Django facilita la escritura de pruebas para asegurar la calidad del código. Se pueden realizar pruebas unitarias y de integración.
+
+- Despliegue de Aplicaciones Django: Una aplicación Django puede ser desplegada en diversos entornos, desde servidores locales hasta servicios en la nube como Heroku o AWS.
+
+
+
