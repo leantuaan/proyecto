@@ -13,6 +13,14 @@ modified: '2023-11-21T11:43:33.791Z'
 
 Django es un framework de desarrollo web de código abierto escrito en Python que sigue el principio "don't repeat yourself" (DRY) y favorece la rápida creación y desarrollo de aplicaciones web robustas y mantenibles. Su principal objetivo es facilitar la construcción de sitios web complejos al proporcionar una estructura organizada y predefinida.
 
+# Historia de Django
+
+Django fue inventado por Lawrence Journal-World en 2003, para cumplir con el corto plazos en el periódico y al mismo tiempo cumplir con las demandas de desarrolladores web experimentados.
+
+El lanzamiento inicial al público fue en julio de 2005.
+
+La última versión de Django es 4.0.3 (marzo de 2022).
+
 ## 2. Características Clave de Django
 
 - **MVC (Modelo-Vista-Controlador):** Django sigue el patrón de diseño MVC, lo que significa que separa la lógica de la aplicación en modelos, vistas y controladores para mejorar la modularidad y escalabilidad.
