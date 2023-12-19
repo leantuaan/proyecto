@@ -1973,7 +1973,83 @@ MIDDLEWARE = [
 ````
 ----------------------------------------------------------------------------------------------------------------------------------------
 
+# Manejar archivos estáticos
 
+Archivos estáticos en su proyecto, como hojas de estilo, JavaScript e imágenes, Django no los maneja automáticamente cuando `DEBUG` = `False`.
+
+Cuando `DEBUG` = `True`, esto funcionó bien, todo lo que tuvimos que hacer fue ponerlos en el `static` carpeta de la aplicación.
+
+Cuando `DEBUG` = `False`, se deben recopilar archivos estáticos y colocarlo en una carpeta específica antes de que podamos usarlo.
+
+## Recopilar archivos estáticos
+
+Para recopilar todos los archivos estáticos necesarios para su proyecto, comience especificando un `STATIC_ROOT` propiedad en el `settings.py` archivo.
+
+Esto especifica una carpeta donde desea recopilar sus archivos estáticos.
+
+Puedes llamar a la carpeta como quieras, nosotros la llamaremos `productionfiles`:
+```console
+my_tennis_club/my_tennis_club/settings.py:
+
+.
+.
+
+STATIC_ROOT = BASE_DIR / 'productionfiles'
+
+STATIC_URL = 'static/'
+
+.
+.
+
+```
+
+Puede crear manualmente esta carpeta y recopilar y colocar todos los archivos estáticos de su proyecto. en esta carpeta, pero Django tiene un comando que hace esto por ti:
+
+```console
+py manage.py collectstatic
+````
+
+Lo que producirá este resultado:
+```console
+131 static files copied to 'C:\Users\your_name\myworld\my_tennis_club\productionfiles'.
+````
+
+Queremos mantener esta función en producción y viene con una gran cantidad de archivos que incluyen hojas de estilo, fuentes, imágenes y JavaScripts.
+```console
+my_tennis_club
+    members/
+    my_tennis_club/
+    productionfiles/
+        admin/
+        myfirst.css
+````
+
+Ahora ha recopilado los archivos estáticos de su proyecto, y si tiene WhiteNoise instalado, el ejemplo de la El capítulo Agregar archivos estáticos finalmente funcionó.
+
+Inicie el servidor y vea el resultado:
+```console
+py manage.py runserver
+````
+
+Y mira el resultado en tu propio navegador: `127.0.0.1:8000/testing/`.
+
+Ejemplo
+````console
+my_tennis_club/members/templates/template.html:
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="{% static 'myfirst.css' %}">
+<body>
+
+{% for x in fruits %}
+  <h1>{{ x }}</h1>
+{% endfor %}
+
+</body>
+</html>
+````
 
 # Conclusiones
 
