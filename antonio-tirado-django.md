@@ -10,9 +10,10 @@ modified: '2023-11-21T11:43:33.791Z'
 
 # Introducción
 
+
 Django es un framework de desarrollo web de código abierto escrito en Python que sigue el principio "don't repeat yourself" (DRY) y favorece la rápida creación y desarrollo de aplicaciones web robustas y mantenibles. Su principal objetivo es facilitar la construcción de sitios web complejos al proporcionar una estructura organizada y predefinida.
 
-## Características Clave de Django:
+## 2. Características Clave de Django
 
 - **MVC (Modelo-Vista-Controlador):** Django sigue el patrón de diseño MVC, lo que significa que separa la lógica de la aplicación en modelos, vistas y controladores para mejorar la modularidad y escalabilidad.
 
