@@ -4,37 +4,41 @@ created: '2023-11-21T09:58:29.921Z'
 modified: '2023-11-21T11:43:33.791Z'
 ---
 
-## DJANGO PYTHON
+## DJANGO PYTHON ANTONIO TIRADO GONZALEZ 
+
+    
 
 # Introducción
 
 Django es un framework de desarrollo web de código abierto escrito en Python que sigue el principio "don't repeat yourself" (DRY) y favorece la rápida creación y desarrollo de aplicaciones web robustas y mantenibles. Su principal objetivo es facilitar la construcción de sitios web complejos al proporcionar una estructura organizada y predefinida.
 
-- Características Clave de Django:
+## Características Clave de Django:
 
-- MVC (Modelo-Vista-Controlador): Django sigue el patrón de diseño MVC, lo que significa que separa la lógica de la aplicación en modelos, vistas y controladores para mejorar la modularidad y escalabilidad.
+- **MVC (Modelo-Vista-Controlador):** Django sigue el patrón de diseño MVC, lo que significa que separa la lógica de la aplicación en modelos, vistas y controladores para mejorar la modularidad y escalabilidad.
 
-- ORM (Mapeo Objeto-Relacional): Django utiliza un ORM que permite interactuar con la base de datos utilizando objetos en Python en lugar de consultas SQL directas.
+- **ORM (Mapeo Objeto-Relacional):** Django utiliza un ORM que permite interactuar con la base de datos utilizando objetos en Python en lugar de consultas SQL directas.
 
-- Admin Site Incorporado: Proporciona un panel de administración automático para gestionar modelos y datos de manera eficiente.
+- **Admin Site Incorporado:** Proporciona un panel de administración automático para gestionar modelos y datos de manera eficiente.
 
-- Sistema de Plantillas: Django incluye un sistema de plantillas para la presentación de datos de manera sencilla y dinámica en las vistas.
+- **Sistema de Plantillas:** Django incluye un sistema de plantillas para la presentación de datos de manera sencilla y dinámica en las vistas.
 
-- Seguridad Integrada: Viene con medidas de seguridad incorporadas para proteger contra amenazas comunes como ataques de inyección SQL, CSRF, entre otros.
+- **Seguridad Integrada:** Viene con medidas de seguridad incorporadas para proteger contra amenazas comunes como ataques de inyección SQL, CSRF, entre otros.
 
-- Uso de Django:
+## Uso de Django:
+
 Django se utiliza ampliamente en el desarrollo de aplicaciones web de todo tipo, desde sitios web simples hasta plataformas complejas. Su estructura y conjunto de características lo hacen especialmente útil para proyectos que requieren escalabilidad, mantenibilidad y seguridad.
 
-- Importancia de la Instalación Correcta:
+### Importancia de la Instalación Correcta:
+
 La instalación correcta de Django es crucial para iniciar un proyecto de desarrollo web de manera exitosa. Algunas razones para una instalación precisa incluyen:
 
-- Configuración del Entorno de Desarrollo: La instalación adecuada garantiza que tu entorno de desarrollo esté configurado correctamente, incluyendo la versión correcta de Python y otras dependencias.
+- **Configuración del Entorno de Desarrollo:** La instalación adecuada garantiza que tu entorno de desarrollo esté configurado correctamente, incluyendo la versión correcta de Python y otras dependencias.
 
-- Acceso a Herramientas y Funcionalidades: Una instalación correcta proporciona acceso a las herramientas y funcionalidades de Django, lo que facilita el desarrollo y la implementación de características avanzadas.
+- **Acceso a Herramientas y Funcionalidades:** Una instalación correcta proporciona acceso a las herramientas y funcionalidades de Django, lo que facilita el desarrollo y la implementación de características avanzadas.
 
-- Prevención de Problemas: Una instalación incorrecta puede dar lugar a errores y problemas durante el desarrollo, afectando la eficiencia y la calidad del código.
+- **Prevención de Problemas:** Una instalación incorrecta puede dar lugar a errores y problemas durante el desarrollo, afectando la eficiencia y la calidad del código.
 
--Compatibilidad: Asegurarse de que todos los componentes estén instalados correctamente garantiza la compatibilidad con las versiones de Django y sus dependencias.
+- **Compatibilidad:** Asegurarse de que todos los componentes estén instalados correctamente garantiza la compatibilidad con las versiones de Django y sus dependencias.
 
 
 ## 2.1. Linux
