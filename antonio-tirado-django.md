@@ -1886,6 +1886,92 @@ class Archivo(models.Model):
     archivo = models.FileField(storage=S3Boto3Storage())
 ````
 --------------------------------------------------------------------------------------
+# Eliminar datos en Django
+
+Eliminar registros
+
+Para eliminar un registro en una tabla, comience obteniendo el registro que desea eliminar:
+```console
+>>> from members.models import Member
+>>> x = Member.objects.all()[5]
+````
+"x" ahora representará al miembro en el índice 5, que es "Jane Doe", pero para estar seguros, veamos si es correcto:
+````console
+>>> x.firstname
+````
+Esto debería darte este resultado:
+
+'Jane'
+
+Ahora podemos eliminar el registro:
+```console
+>>> x.delete()
+````
+
+El resultado será:
+
+```console
+(1, {'members.Member': 1})
+````
+
+Lo que nos dice cuántos elementos se eliminaron y de qué modelo.
+
+Si miramos el modelo de miembro, podemos ver que 'Jane Doe' se elimina del modelo:
+````console
+>>> Member.objects.all().values()
+<QuerySet [{'id': 1, 'firstname': 'Emil', 'lastname': 'Refsnes'},
+{'id': 2, 'firstname': 'Tobias', 'lastname': 'Refsnes'},
+{'id': 3, 'firstname': 'Linus', 'lastname': 'Refsnes'},
+{'id': 4, 'firstname': 'Lene', 'lastname': 'Refsnes'},
+{'id': 5, 'firstname': 'Stalikken', 'lastname': 'Refsnes'}]>
+````
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+# Instalar WhiteNoise
+
+Django no tiene una solución integrada para servir archivos estáticos, al menos no en producción cuando DEBUG tiene que ser False.
+
+Tenemos que utilizar una solución de terceros para lograr esto.
+
+En este tutorial usaremos WhiteNoise, que es una biblioteca de Python, creada para servir archivos estáticos.
+
+Para instalar WhiteNoise en su entorno virtual, escriba el siguiente comando:
+````console
+pip install whitenoise
+````
+
+
+El resultado debería ser algo como esto:
+````console
+Collecting whitenoise
+  Downloading whitenoise-6.2.0-py3-none-any.whl (19 kB)
+Installing collected packages: whitenoise
+Successfully installed whitenoise-6.2.0
+WARNING: You are using pip version 20.2.3; however, version 22.3.1 is available.
+You should consider upgrading via the 'c:\users\Your Name\myworld\scripts\python.exe -m pip install --upgrade pip' command.
+````
+
+Para que Django sepa que desea ejecutar WhitNoise, debe especificarlo en el MIDDLEWARE lista en settings.py archivo:
+```console
+my_tennis_club/my_tennis_club/settings.py:
+
+.
+.
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+].
+.
+
+````
+----------------------------------------------------------------------------------------------------------------------------------------
 
 
 
