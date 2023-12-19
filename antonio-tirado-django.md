@@ -1505,6 +1505,143 @@ Estos recursos te proporcionarán una base sólida y te ayudarán a explorar asp
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+### 21. Django Testing Tools
+
+Django proporciona un conjunto integral de herramientas de prueba que permiten a los desarrolladores garantizar que sus aplicaciones funcionan correctamente y cumplen con los requisitos especificados. Más allá de las pruebas unitarias básicas, existen herramientas avanzadas que facilitan la escritura y ejecución de pruebas más complejas.
+
+#### Herramientas de Pruebas Integradas
+
+Django incluye un marco de pruebas integrado que facilita la creación de pruebas unitarias y de integración. Algunas herramientas clave incluyen:
+
+- **`django.test.TestCase`:** Clase base para las pruebas que proporciona configuraciones específicas de Django y métodos útiles.
+
+- **`django.test.Client`:** Cliente de prueba que simula solicitudes HTTP, permitiendo probar las vistas de manera efectiva.
+
+- **`django.test.TransactionTestCase`:** Similar a `TestCase`, pero ejecuta cada prueba dentro de una transacción de base de datos.
+
+#### Herramientas de Pruebas Funcionales
+
+- **[Selenium](https://www.selenium.dev/):** Aunque no es exclusivo de Django, Selenium es una herramienta poderosa para realizar pruebas de interfaz de usuario automatizadas. Permite simular interacciones del usuario con un navegador.
+
+#### Uso de `pytest` con Django
+
+[Django admite](https://docs.djangoproject.com/en/3.2/topics/testing/tools/#using-pytest-with-django) el uso de `pytest`, una herramienta de prueba más flexible y potente que complementa las capacidades de las pruebas estándar de Django. Puedes instalar `pytest` y sus complementos relacionados con:
+
+```bash
+pip install pytest pytest-django
+
+````
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### 25. Django y Machine Learning:
+
+Django y el aprendizaje automático (Machine Learning) pueden combinarse para crear aplicaciones más inteligentes y predictivas. Integrar modelos de machine learning en una aplicación Django puede ofrecer funcionalidades avanzadas y personalizadas. Aquí hay una guía básica sobre cómo hacerlo:
+
+#### Integración de Modelos de Machine Learning:
+
+1. **Entrenamiento del Modelo:**
+   - Utiliza bibliotecas populares como TensorFlow o PyTorch para entrenar tu modelo de machine learning.
+   - Guarda el modelo entrenado en un formato compatible.
+
+2. **Integración con Django:**
+   - Crea una aplicación Django dedicada para la integración de machine learning.
+   - Guarda el modelo entrenado en el directorio de tu aplicación.
+
+3. **Vista de Django para Predicciones:**
+   - Diseña una vista en Django que cargue el modelo entrenado y utilícelo para realizar predicciones.
+   - Configura las rutas para acceder a esta vista desde tu aplicación principal.
+
+4. **Interfaz de Usuario:**
+   - Diseña una interfaz de usuario que permita a los usuarios interactuar con la funcionalidad de machine learning.
+   - Puedes utilizar formularios para recopilar datos de entrada y mostrar resultados de predicción.
+
+#### Ejemplo de Código:
+
+Aquí hay un ejemplo básico de cómo podría verse la vista en Django para realizar predicciones utilizando un modelo de machine learning previamente entrenado:
+
+```python
+# views.py
+
+from django.shortcuts import render
+from django.http import JsonResponse
+import joblib  # o la biblioteca necesaria para cargar tu modelo entrenado
+
+def predict_view(request):
+    if request.method == 'POST':
+        # Recopila datos de entrada del formulario
+        input_data = request.POST.get('input_data')
+
+        # Carga el modelo previamente entrenado
+        model = joblib.load('ruta/al/modelo_entrenado.pkl')
+
+        # Realiza una predicción
+        prediction = model.predict([input_data])[0]
+
+        # Devuelve el resultado como JSON
+        return JsonResponse({'prediction': prediction})
+
+    return render(request, 'predict_form.html')
+````
+
+
+
+### 25. Django y Machine Learning:
+
+Django y el aprendizaje automático (Machine Learning) pueden combinarse para crear aplicaciones más inteligentes y predictivas. Integrar modelos de machine learning en una aplicación Django puede ofrecer funcionalidades avanzadas y personalizadas. Aquí hay una guía básica sobre cómo hacerlo:
+
+#### Integración de Modelos de Machine Learning:
+
+1. **Entrenamiento del Modelo:**
+   - Utiliza bibliotecas populares como TensorFlow o PyTorch para entrenar tu modelo de machine learning.
+   - Guarda el modelo entrenado en un formato compatible.
+
+2. **Integración con Django:**
+   - Crea una aplicación Django dedicada para la integración de machine learning.
+   - Guarda el modelo entrenado en el directorio de tu aplicación.
+
+3. **Vista de Django para Predicciones:**
+   - Diseña una vista en Django que cargue el modelo entrenado y utilícelo para realizar predicciones.
+   - Configura las rutas para acceder a esta vista desde tu aplicación principal.
+
+4. **Interfaz de Usuario:**
+   - Diseña una interfaz de usuario que permita a los usuarios interactuar con la funcionalidad de machine learning.
+   - Puedes utilizar formularios para recopilar datos de entrada y mostrar resultados de predicción.
+
+#### Ejemplo de Código:
+
+Aquí hay un ejemplo básico de cómo podría verse la vista en Django para realizar predicciones utilizando un modelo de machine learning previamente entrenado:
+
+```python
+# views.py
+
+from django.shortcuts import render
+from django.http import JsonResponse
+import joblib  # o la biblioteca necesaria para cargar tu modelo entrenado
+
+def predict_view(request):
+    if request.method == 'POST':
+        # Recopila datos de entrada del formulario
+        input_data = request.POST.get('input_data')
+
+        # Carga el modelo previamente entrenado
+        model = joblib.load('ruta/al/modelo_entrenado.pkl')
+
+        # Realiza una predicción
+        prediction = model.predict([input_data])[0]
+
+        # Devuelve el resultado como JSON
+        return JsonResponse({'prediction': prediction})
+
+    return render(request, 'predict_form.html')
+
+````
+
+Consideraciones de Seguridad y Desempeño:
+Asegúrate de que la carga del modelo y la predicción sean eficientes, especialmente si se espera un alto volumen de tráfico.
+Implementa medidas de seguridad para proteger el modelo y los datos utilizados en el proceso de predicción.
+Realiza pruebas exhaustivas para garantizar la precisión y confiabilidad de las predicciones en un entorno de producción.
+
 # Conclusiones
 
 ## Recapitulación de los conceptos aprendidos.
