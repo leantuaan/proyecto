@@ -1245,6 +1245,50 @@ Abre tu navegador y visita http://localhost:8000/mi_app/libros/ para ver la list
 
 ------------------------------------------------------------------------------------------------------------------------------
 
+# Beneficios de Django
+
+Rápido: debido a la forma en que está configurado Django, puede despegar muy rápidamente. Realmente no toma mucho tiempo configurar una aplicación Django si ya tiene en mente la arquitectura de la aplicación.
+
+Escalable: Django puede satisfacer las demandas de tráfico de un gran proyecto.
+Totalmente cargado: hay todo tipo de paquetes que puede utilizar para realizar tareas estándar de aplicaciones web como autenticación o administración de contenido o consultas.
+
+Versátil: Django es bastante versátil. Puede utilizarlo para todo tipo de aplicaciones.
+Seguro: los riesgos de seguridad comunes se evitan con los protocolos de seguridad integrados de Django para falsificaciones de solicitudes entre sitios, secuencias de comandos entre sitios, clickjacking e inyección SQL.
+
+Optimización para SEO: Django facilita el SEO al mantener un sitio web a través de URL en lugar de direcciones IP.
+Documentación: la documentación de Django es una de las mejores del mercado. Es fácil de leer, incluso para personas sin conocimientos técnicos.
+
+# Desventajas de Django
+
+Curva de aprendizaje inicial:
+
+Para los principiantes, Django puede tener una curva de aprendizaje pronunciada, especialmente si es la primera vez que trabajan con un marco de desarrollo web o con el lenguaje Python.
+
+Demasiado estructurado para proyectos pequeños:
+
+En proyectos pequeños o simples, la estructura y las características de Django pueden parecer excesivas y complejas. Puede llevar más tiempo configurar un proyecto pequeño en comparación con otros marcos más ligeros.
+
+Overhead de funcionalidades no utilizadas:
+
+Django proporciona una amplia gama de características incorporadas, como la administración de la base de datos, el sistema de autenticación y la interfaz de administración. Sin embargo, en proyectos más pequeños o específicos, es posible que algunas de estas características no sean necesarias, lo que puede generar un cierto overhead.
+
+Desempeño en tiempo real:
+
+Para aplicaciones que requieren actualizaciones en tiempo real o una alta escalabilidad en tiempo real (como aplicaciones de chat en vivo), Django puede no ser la opción más eficiente. En estos casos, otros marcos o tecnologías específicas para tiempo real pueden ser más adecuados.
+Rigidez en la estructura de la base de datos:
+
+Aunque la administración de la base de datos es una ventaja para muchos, puede ser una limitación en situaciones en las que se prefiere un control más granular sobre la estructura de la base de datos.
+
+Tamaño de la comunidad en comparación con otros frameworks:
+
+Aunque Django tiene una comunidad activa y robusta, puede ser más pequeña en comparación con otros marcos populares como Flask. Esto puede resultar en una cantidad relativamente menor de recursos y complementos disponibles en comparación con otros marcos.
+
+Exceso de opiniones (baterías incluidas):
+
+Django sigue el principio de "baterías incluidas", lo que significa que viene con muchas características integradas. Sin embargo, algunas personas prefieren frameworks más minimalistas que les permitan elegir las bibliotecas y herramientas que desean utilizar.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # Conclusiones
 
 ## Recapitulación de los conceptos aprendidos.
