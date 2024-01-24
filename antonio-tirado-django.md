@@ -70,120 +70,224 @@ modified: '2023-11-21T11:43:33.791Z'
   
    9.7 [Exceso de opiniones (baterías incluidas)](#exceso-de-opiniones-baterías-incluidas)
 
+
 13. [Seguridad en Django](#seguridad-en-django)
+
     10.1 [Mejores Prácticas para Garantizar la Seguridad en Aplicaciones Django](#mejores-prácticas-para-garantizar-la-seguridad-en-aplicaciones-django)
-       10.1.1 [Mantén Django y Dependencias Actualizadas](#mantén-django-y-dependencias-actualizadas)
-       10.1.2 [Configuración Segura de settings.py](#configuración-segura-de-settingspy)
-       10.1.3 [Validación y Escape de Datos de Usuario](#validación-y-escape-de-datos-de-usuario)
-       10.1.4 [Protección contra CSRF (Cross-Site Request Forgery)](#protección-contra-csrf-cross-site-request-forgery)
-       10.1.5 [Autenticación Segura](#autenticación-segura)
+
+     10.1.1 [Mantén Django y Dependencias Actualizadas](#mantén-django-y-dependencias-actualizadas)
+
+     10.1.2 [Configuración Segura de settings.py](#configuración-segura-de-settingspy)
+
+     10.1.3 [Validación y Escape de Datos de Usuario](#validación-y-escape-de-datos-de-usuario)
+
+     10.1.4 [Protección contra CSRF (Cross-Site Request Forgery)](#protección-contra-csrf-cross-site-request-forgery)
+
+      10.1.5 [Autenticación Segura](#autenticación-segura)
+  
     10.2 [Protección contra Vulnerabilidades Comunes](#protección-contra-vulnerabilidades-comunes)
+
        10.2.1 [Inyección de SQL](#inyección-de-sql)
-       10.2.2 [XSS (Cross-Site Scripting)](#xss-cross-site-scripting)
-       10.2.3 [Clickjacking](#clickjacking)
-       10.2.4 [Ataques de Fuerza Bruta](#ataques-de-fuerza-bruta)
-       10.2.5 [Manejo Seguro de Archivos](#manejo-seguro-de-archivos)
 
-14. [Optimización y Desempeño en Django](#optimización-y-desempeño-en-django)
-    11.1 [Caching](#caching)
-       11.1.1 [Ejemplo de configuración de caching en settings.py](#ejemplo-de-configuración-de-caching-en-settingspy)
+     10.2.2 [XSS (Cross-Site Scripting)](#xss-cross-site-scripting)
+
+     10.2.3 [Clickjacking](#clickjacking)
+
+     10.2.4 [Ataques de Fuerza Bruta](#ataques-de-fuerza-bruta)
+
+     10.2.5 [Manejo Seguro de Archivos](#manejo-seguro-de-archivos)
+
+
+15. [Optimización y Desempeño en Django](#optimización-y-desempeño-en-django)
+
+     11.1 [Caching](#caching)
+
+      11.1.1 [Ejemplo de configuración de caching en settings.py](#ejemplo-de-configuración-de-caching-en-settingspy)
+  
     11.2 [Middleware de Compresión](#middleware-de-compresión)
-       11.2.1 [settings.py](#settingspy)
+
+     11.2.1 [settings.py](#settingspy)
+  
     11.3 [Consultas Eficientes a la Base de Datos](#consultas-eficientes-a-la-base-de-datos)
-       11.3.1 [views.py](#viewspy)
-       11.3.2 [Evitar consultas adicionales al recuperar los autores con sus libros](#evitar-consultas-adicionales-al-recuperar-los-autores-con-sus-libros)
-    11.4 [Uso Eficiente de Templates y Código JavaScript](#uso-eficiente-de-templates-y-código-javascript)
-    11.5 [Herramientas de Monitoreo y Perfilado](#herramientas-de-monitoreo-y-perfilado)
 
-15. [Problemas Comunes y Soluciones](#problemas-comunes-y-soluciones)
-    12.1 [Migraciones Fallidas](#migraciones-fallidas)
+        11.3.1 [views.py](#viewspy)
+
+        11.3.2 [Evitar consultas adicionales al recuperar los autores con sus libros](#evitar-consultas-adicionales-al-recuperar-los-autores-con-sus-libros)
+
+     11.4 [Uso Eficiente de Templates y Código JavaScript](#uso-eficiente-de-templates-y-código-javascript)
+
+     11.5 [Herramientas de Monitoreo y Perfilado](#herramientas-de-monitoreo-y-perfilado)
+
+
+17. [Problemas Comunes y Soluciones](#problemas-comunes-y-soluciones)
+
+     12.1 [Migraciones Fallidas](#migraciones-fallidas)
+
        12.1.1 [Problema](#problema)
-       12.1.2 [Solución](#solución)
-    12.2 [Errores de Importación](#errores-de-importación)
-       12.2.1 [Problema](#problema)
-       12.2.2 [Solución](#solución)
-    12.3 [Problemas de Despliegue en Producción](#problemas-de-despliegue-en-producción)
-       12.3.1 [Problema](#problema)
-       12.3.2 [Solución](#solución)
-    12.4 [Errores en la Configuración del Middleware](#errores-en-la-configuración-del-middleware)
-       12.4.1 [Problema](#problema)
-       12.4.2 [Solución](#solución)
-    12.5 [Problemas de Seguridad](#problemas-de-seguridad)
-       12.5.1 [Problema](#problema)
-       12.5.2 [Solución](#solución)
-    12.6 [Rendimiento Lento](#rendimiento-lento)
-       12.6.1 [Problema](#problema)
-       12.6.2 [Solución](#solución)
 
-16. [Recursos Adicionales](#recursos-adicionales)
-    13.1 [Documentación Oficial de Django](#documentación-oficial-de-django)
-    13.2 [Recursos de la Comunidad](#recursos-de-la-comunidad)
-    13.3 [Libros Recomendados](#libros-recomendados)
-    13.4 [Tutoriales Recomendados](#tutoriales-recomendados)
-    13.5 [Django Testing Tools](#django-testing-tools)
+     12.1.2 [Solución](#solución)
    
-17. [Herramientas de Pruebas Integradas](#herramientas-de-pruebas-integradas)
+    12.2 [Errores de Importación](#errores-de-importación)
+
+     12.2.1 [Problema](#problema)
+
+      12.2.2 [Solución](#solución)
+
+    12.3 [Problemas de Despliegue en Producción](#problemas-de-despliegue-en-producción)
+
+     12.3.1 [Problema](#problema)
+
+      12.3.2 [Solución](#solución)
+
+    12.4 [Errores en la Configuración del Middleware](#errores-en-la-configuración-del-middleware)
+
+    12.4.1 [Problema](#problema)
+
+    12.4.2 [Solución](#solución)
+
+    12.5 [Problemas de Seguridad](#problemas-de-seguridad)
+
+     12.5.1 [Problema](#problema)
+
+        12.5.2 [Solución](#solución)
+ 
+    12.6 [Rendimiento Lento](#rendimiento-lento)
+
+      12.6.1 [Problema](#problema)
+
+     12.6.2 [Solución](#solución)
+
+
+19. [Recursos Adicionales](#recursos-adicionales)
+  
+    13.1 [Documentación Oficial de Django](#documentación-oficial-de-django)
+  
+    13.2 [Recursos de la Comunidad](#recursos-de-la-comunidad)
+
+    13.3 [Libros Recomendados](#libros-recomendados)
+
+     13.4 [Tutoriales Recomendados](#tutoriales-recomendados)
+
+     13.5 [Django Testing Tools](#django-testing-tools)
+   
+
+21. [Herramientas de Pruebas Integradas](#herramientas-de-pruebas-integradas)
+  
     14.1 [Herramientas de Pruebas Funcionales](#herramientas-de-pruebas-funcionales)
-    14.2 [Uso de pytest con Django](#uso-de-pytest-con-django)
 
-18. [Django y Machine Learning](#django-y-machine-learning)
-    15.1 [Integración de Modelos de Machine Learning](#integración-de-modelos-de-machine-learning)
-       15.1.1 [Ejemplo de Código](#ejemplo-de-código)
+     14.2 [Uso de pytest con Django](#uso-de-pytest-con-django)
 
-19. [Desarrollo de Aplicaciones Móviles con Django](#desarrollo-de-aplicaciones-móviles-con-django)
+23. [Django y Machine Learning](#django-y-machine-learning)
+
+     15.1 [Integración de Modelos de Machine Learning](#integración-de-modelos-de-machine-learning)
+
+    15.1.1 [Ejemplo de Código](#ejemplo-de-código)
+
+
+25. [Desarrollo de Aplicaciones Móviles con Django](#desarrollo-de-aplicaciones-móviles-con-django)
+
     16.1 [Creación de una API REST con Django](#creación-de-una-api-rest-con-django)
-       16.1.1 [Configuración de serializadores y vistas](#configuración-de-serializadores-y-vistas)
-       16.1.2 [Autenticación y autorización](#autenticación-y-autorización)
-       16.1.3 [Integración con la aplicación móvil](#integración-con-la-aplicación-móvil)
-       16.1.4 [Manejo de datos en la aplicación móvil](#manejo-de-datos-en-la-aplicación-móvil)
-       16.1.5 [Sincronización de datos y optimización de rendimiento](#sincronización-de-datos-y-optimización-de-rendimiento)
-       16.1.6 [Herramientas adicionales](#herramientas-adicionales)
-       16.1.7 [Consideraciones de seguridad](#consideraciones-de-seguridad)
 
-20. [Casos de Estudio](#casos-de-estudio)
-    17.1 [Sistema de Gestión de Contenidos (CMS) para una Editorial](#sistema-de-gestión-de-contenidos-cms-para-una-editorial)
+     16.1.1 [Configuración de serializadores y vistas](#configuración-de-serializadores-y-vistas)
+
+     16.1.2 [Autenticación y autorización](#autenticación-y-autorización)
+
+     16.1.3 [Integración con la aplicación móvil](#integración-con-la-aplicación-móvil)
+
+     16.1.4 [Manejo de datos en la aplicación móvil](#manejo-de-datos-en-la-aplicación-móvil)
+
+      16.1.5 [Sincronización de datos y optimización de rendimiento](#sincronización-de-datos-y-optimización-de-rendimiento)
+
+      16.1.6 [Herramientas adicionales](#herramientas-adicionales)
+
+      16.1.7 [Consideraciones de seguridad](#consideraciones-de-seguridad)
+
+
+27. [Casos de Estudio](#casos-de-estudio)
+
+     17.1 [Sistema de Gestión de Contenidos (CMS) para una Editorial](#sistema-de-gestión-de-contenidos-cms-para-una-editorial)
+
        17.1.1 [Descripción](#descripción)
-       17.1.2 [Desafíos](#desafíos)
-       17.1.3 [Soluciones](#soluciones)
+
+      17.1.2 [Desafíos](#desafíos)
+
+      17.1.3 [Soluciones](#soluciones)
+
     17.2 [Plataforma de Comercio Electrónico](#plataforma-de-comercio-electrónico)
-       17.2.1 [Descripción](#descripción)
-       17.2.2 [Desafíos](#desafíos)
-       17.2.3 [Soluciones](#soluciones)
-    17.3 [Plataforma de Aprendizaje en Línea](#plataforma-de-aprendizaje-en-línea)
-       17.3.1 [Descripción](#descripción)
-       17.3.2 [Desafíos](#desafíos)
-       17.3.3 [Soluciones](#soluciones)
 
-21. [Despliegue en Entornos de Producción](#despliegue-en-entornos-de-producción)
-    18.1 [Mejores Prácticas](#mejores-prácticas)
-       18.1.1 [Escalabilidad y Rendimiento](#escalabilidad-y-rendimiento)
-          18.1.1.1 [Desafíos](#desafíos)
-          18.1.1.2 [Soluciones](#soluciones)
-       18.1.2 [Configuración de Servidores Web](#configuración-de-servidores-web)
-          18.1.2.1 [Desafíos](#desafíos)
-          18.1.2.2 [Soluciones](#soluciones)
-       18.1.3 [Gestión de Versiones y Despliegue Continuo](#gestión-de-versiones-y-despliegue-continuo)
-          18.1.3.1 [Desafíos](#desafíos)
-          18.1.3.2 [Soluciones](#soluciones)
-       18.1.4 [Monitoreo y Registro](#monitoreo-y-registro)
-          18.1.4.1 [Desafíos](#desafíos)
-          18.1.4.2 [Soluciones](#soluciones)
-          18.1.4.3 [Ejemplo de Configuración con Docker y Nginx](#ejemplo-de-configuración-con-docker-y-nginx)
+      17.2.1 [Descripción](#descripción)
 
-22. [Integración con Otras Tecnologías](#integración-con-otras-tecnologías)
+      17.2.2 [Desafíos](#desafíos)
+
+     17.2.3 [Soluciones](#soluciones)
+
+     17.3 [Plataforma de Aprendizaje en Línea](#plataforma-de-aprendizaje-en-línea)
+
+      17.3.1 [Descripción](#descripción)
+
+     17.3.2 [Desafíos](#desafíos)
+
+     17.3.3 [Soluciones](#soluciones)
+
+
+29. [Despliegue en Entornos de Producción](#despliegue-en-entornos-de-producción)
+
+     18.1 [Mejores Prácticas](#mejores-prácticas)
+
+      18.1.1 [Escalabilidad y Rendimiento](#escalabilidad-y-rendimiento)
+
+        18.1.1.1 [Desafíos](#desafíos)
+
+    18.1.1.2 [Soluciones](#soluciones)
+
+    18.1.2 [Configuración de Servidores Web](#configuración-de-servidores-web)
+
+     18.1.2.1 [Desafíos](#desafíos)
+
+    18.1.2.2 [Soluciones](#soluciones)
+
+     18.1.3 [Gestión de Versiones y Despliegue Continuo](#gestión-de-versiones-y-despliegue-continuo)
+
+        18.1.3.1 [Desafíos](#desafíos)
+
+      18.1.3.2 [Soluciones](#soluciones)
+
+     18.1.4 [Monitoreo y Registro](#monitoreo-y-registro)
+
+     18.1.4.1 [Desafíos](#desafíos)
+
+    18.1.4.2 [Soluciones](#soluciones)
+
+      18.1.4.3 [Ejemplo de Configuración con Docker y Nginx](#ejemplo-de-configuración-con-docker-y-nginx)
+
+
+31. [Integración con Otras Tecnologías](#integración-con-otras-tecnologías)
+  
     19.1 [Bases de Datos](#bases-de-datos)
-       19.1.1 [Desafíos](#desafíos)
-       19.1.2 [Soluciones](#soluciones)
+
+      19.1.1 [Desafíos](#desafíos)
+
+      19.1.2 [Soluciones](#soluciones)
+
     19.2 [Sistemas de Almacenamiento](#sistemas-de-almacenamiento)
-       19.2.1 [Desafíos](#desafíos)
-       19.2.2 [Soluciones](#soluciones)
+
+     19.2.1 [Desafíos](#desafíos)
+
+      19.2.2 [Soluciones](#soluciones)
+
     19.3 [Servidores de Aplicaciones](#servidores-de-aplicaciones)
-       19.3.1 [Desafíos](#desafíos)
-       19.3.2 [Soluciones](#soluciones)
-    19.4 [Servicios en la Nube](#servicios-en-la-nube)
-       19.4.1 [Desafíos](#desafíos)
-       19.4.2 [Soluciones](#soluciones)
-       19.4.3 [Ejemplo de Configuración con Amazon S3](#ejemplo-de-configuración-con-amazon-s3)
+
+     19.3.1 [Desafíos](#desafíos)
+
+    19.3.2 [Soluciones](#soluciones)
+
+     19.4 [Servicios en la Nube](#servicios-en-la-nube)
+
+      19.4.1 [Desafíos](#desafíos)
+
+      19.4.2 [Soluciones](#soluciones)
+
+     19.4.3 [Ejemplo de Configuración con Amazon S3](#ejemplo-de-configuración-con-amazon-s3)
 
 
 
