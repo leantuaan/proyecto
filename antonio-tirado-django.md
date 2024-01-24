@@ -15,38 +15,62 @@ modified: '2023-11-21T11:43:33.791Z'
 
  
   3. [Uso de Django](#uso-de-django)
-     3.1 [Importancia de la Instalación Correcta](#importancia-de-la-instalación-correcta)
+
+      3.1 [Importancia de la Instalación Correcta](#importancia-de-la-instalación-correcta)
+
       3.1.1 [Linux](#linux)
-         3.1.1.1 [Requisitos previos](#requisitos-previos)
-      3.1.2 [Windows](#windows)
-           3.1.2.1 [Requisitos previos](#requisitos-previos)
-           3.1.2.2 [Configuración del entorno virtual](#configuración-del-entorno-virtual)
+
+      3.1.1.1 [Requisitos previos](#requisitos-previos)
+
+     3.1.2 [Windows](#windows)
+
+      3.1.2.1 [Requisitos previos](#requisitos-previos)
+
+      3.1.2.2 [Configuración del entorno virtual](#configuración-del-entorno-virtual)
+  
    3.2 [Sintaxis Básica de Django](#sintaxis-básica-de-django)
    
-4. [Estructura de un proyecto Django](#estructura-de-un-proyecto-django)
 
-5. [Creación y configuración de una aplicación Django](#creación-y-configuración-de-una-aplicación-django)
+5. [Estructura de un proyecto Django](#estructura-de-un-proyecto-django)
+
+
+6. [Creación y configuración de una aplicación Django](#creación-y-configuración-de-una-aplicación-django)
+
    5.1 [Archivos clave: settings.py, urls.py, etc.](#archivos-clave-settingspy-urlspy-etc)
    
-6. [Estructuras de Control en Django](#estructuras-de-control-en-django)
-   6.1 [Uso de templates para controlar la presentación](#uso-de-templates-para-controlar-la-presentación)
-   6.2 [Vistas y plantillas](#vistas-y-plantillas)
-   6.3 [Bucles en Django](#bucles-en-django)
+
+8. [Estructuras de Control en Django](#estructuras-de-control-en-django)
+
+    6.1 [Uso de templates para controlar la presentación](#uso-de-templates-para-controlar-la-presentación)
+
+    6.2 [Vistas y plantillas](#vistas-y-plantillas)
+
+    6.3 [Bucles en Django](#bucles-en-django)
    
-7. [CRUD con MYSQL](#crud-con-mysql)
 
-8. [Beneficios de Django](#beneficios-de-django)
+10. [CRUD con MYSQL](#crud-con-mysql)
 
-9. [Desventajas de Django](#desventajas-de-django)
+
+11. [Beneficios de Django](#beneficios-de-django)
+
+
+12. [Desventajas de Django](#desventajas-de-django)
+  
    9.1 [Curva de aprendizaje inicial](#curva-de-aprendizaje-inicial)
+  
    9.2 [Demasiado estructurado para proyectos pequeños](#demasiado-estructurado-para-proyectos-pequeños)
+  
    9.3 [Overhead de funcionalidades no utilizadas](#overhead-de-funcionalidades-no-utilizadas)
+  
    9.4 [Desempeño en tiempo real](#desempeño-en-tiempo-real)
+  
    9.5 [Rigidez en la estructura de la base de datos](#rigidez-en-la-estructura-de-la-base-de-datos)
+  
    9.6 [Tamaño de la comunidad en comparación con otros frameworks](#tamaño-de-la-comunidad-en-comparación-con-otros-frameworks)
+  
    9.7 [Exceso de opiniones (baterías incluidas)](#exceso-de-opiniones-baterías-incluidas)
 
-10. [Seguridad en Django](#seguridad-en-django)
+13. [Seguridad en Django](#seguridad-en-django)
     10.1 [Mejores Prácticas para Garantizar la Seguridad en Aplicaciones Django](#mejores-prácticas-para-garantizar-la-seguridad-en-aplicaciones-django)
        10.1.1 [Mantén Django y Dependencias Actualizadas](#mantén-django-y-dependencias-actualizadas)
        10.1.2 [Configuración Segura de settings.py](#configuración-segura-de-settingspy)
@@ -60,7 +84,7 @@ modified: '2023-11-21T11:43:33.791Z'
        10.2.4 [Ataques de Fuerza Bruta](#ataques-de-fuerza-bruta)
        10.2.5 [Manejo Seguro de Archivos](#manejo-seguro-de-archivos)
 
-11. [Optimización y Desempeño en Django](#optimización-y-desempeño-en-django)
+14. [Optimización y Desempeño en Django](#optimización-y-desempeño-en-django)
     11.1 [Caching](#caching)
        11.1.1 [Ejemplo de configuración de caching en settings.py](#ejemplo-de-configuración-de-caching-en-settingspy)
     11.2 [Middleware de Compresión](#middleware-de-compresión)
@@ -71,7 +95,7 @@ modified: '2023-11-21T11:43:33.791Z'
     11.4 [Uso Eficiente de Templates y Código JavaScript](#uso-eficiente-de-templates-y-código-javascript)
     11.5 [Herramientas de Monitoreo y Perfilado](#herramientas-de-monitoreo-y-perfilado)
 
-12. [Problemas Comunes y Soluciones](#problemas-comunes-y-soluciones)
+15. [Problemas Comunes y Soluciones](#problemas-comunes-y-soluciones)
     12.1 [Migraciones Fallidas](#migraciones-fallidas)
        12.1.1 [Problema](#problema)
        12.1.2 [Solución](#solución)
@@ -91,22 +115,22 @@ modified: '2023-11-21T11:43:33.791Z'
        12.6.1 [Problema](#problema)
        12.6.2 [Solución](#solución)
 
-13. [Recursos Adicionales](#recursos-adicionales)
+16. [Recursos Adicionales](#recursos-adicionales)
     13.1 [Documentación Oficial de Django](#documentación-oficial-de-django)
     13.2 [Recursos de la Comunidad](#recursos-de-la-comunidad)
     13.3 [Libros Recomendados](#libros-recomendados)
     13.4 [Tutoriales Recomendados](#tutoriales-recomendados)
     13.5 [Django Testing Tools](#django-testing-tools)
    
-14. [Herramientas de Pruebas Integradas](#herramientas-de-pruebas-integradas)
+17. [Herramientas de Pruebas Integradas](#herramientas-de-pruebas-integradas)
     14.1 [Herramientas de Pruebas Funcionales](#herramientas-de-pruebas-funcionales)
     14.2 [Uso de pytest con Django](#uso-de-pytest-con-django)
 
-15. [Django y Machine Learning](#django-y-machine-learning)
+18. [Django y Machine Learning](#django-y-machine-learning)
     15.1 [Integración de Modelos de Machine Learning](#integración-de-modelos-de-machine-learning)
        15.1.1 [Ejemplo de Código](#ejemplo-de-código)
 
-16. [Desarrollo de Aplicaciones Móviles con Django](#desarrollo-de-aplicaciones-móviles-con-django)
+19. [Desarrollo de Aplicaciones Móviles con Django](#desarrollo-de-aplicaciones-móviles-con-django)
     16.1 [Creación de una API REST con Django](#creación-de-una-api-rest-con-django)
        16.1.1 [Configuración de serializadores y vistas](#configuración-de-serializadores-y-vistas)
        16.1.2 [Autenticación y autorización](#autenticación-y-autorización)
@@ -116,7 +140,7 @@ modified: '2023-11-21T11:43:33.791Z'
        16.1.6 [Herramientas adicionales](#herramientas-adicionales)
        16.1.7 [Consideraciones de seguridad](#consideraciones-de-seguridad)
 
-17. [Casos de Estudio](#casos-de-estudio)
+20. [Casos de Estudio](#casos-de-estudio)
     17.1 [Sistema de Gestión de Contenidos (CMS) para una Editorial](#sistema-de-gestión-de-contenidos-cms-para-una-editorial)
        17.1.1 [Descripción](#descripción)
        17.1.2 [Desafíos](#desafíos)
@@ -130,7 +154,7 @@ modified: '2023-11-21T11:43:33.791Z'
        17.3.2 [Desafíos](#desafíos)
        17.3.3 [Soluciones](#soluciones)
 
-18. [Despliegue en Entornos de Producción](#despliegue-en-entornos-de-producción)
+21. [Despliegue en Entornos de Producción](#despliegue-en-entornos-de-producción)
     18.1 [Mejores Prácticas](#mejores-prácticas)
        18.1.1 [Escalabilidad y Rendimiento](#escalabilidad-y-rendimiento)
           18.1.1.1 [Desafíos](#desafíos)
@@ -146,7 +170,7 @@ modified: '2023-11-21T11:43:33.791Z'
           18.1.4.2 [Soluciones](#soluciones)
           18.1.4.3 [Ejemplo de Configuración con Docker y Nginx](#ejemplo-de-configuración-con-docker-y-nginx)
 
-19. [Integración con Otras Tecnologías](#integración-con-otras-tecnologías)
+22. [Integración con Otras Tecnologías](#integración-con-otras-tecnologías)
     19.1 [Bases de Datos](#bases-de-datos)
        19.1.1 [Desafíos](#desafíos)
        19.1.2 [Soluciones](#soluciones)
