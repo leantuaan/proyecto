@@ -8,18 +8,18 @@ modified: '2023-11-21T11:43:33.791Z'
 
 # Índice
 
-1. [Introducción](#introducción)
-   1.1 [Historia de Django](#historia-de-django)
+1. [Introducción](#introducción)  
+     1.1 [Historia de Django](#historia-de-django)
    
-2. [Características Clave de Django](#características-clave-de-django)
+2. [Características Clave de Django](#características-clave-de-django)   
 
-3. [Uso de Django](#uso-de-django)
-   3.1 [Importancia de la Instalación Correcta](#importancia-de-la-instalación-correcta)
+  3. [Uso de Django](#uso-de-django)
+     3.1 [Importancia de la Instalación Correcta](#importancia-de-la-instalación-correcta)
       3.1.1 [Linux](#linux)
          3.1.1.1 [Requisitos previos](#requisitos-previos)
       3.1.2 [Windows](#windows)
-         3.1.2.1 [Requisitos previos](#requisitos-previos)
-         3.1.2.2 [Configuración del entorno virtual](#configuración-del-entorno-virtual)
+           3.1.2.1 [Requisitos previos](#requisitos-previos)
+           3.1.2.2 [Configuración del entorno virtual](#configuración-del-entorno-virtual)
    3.2 [Sintaxis Básica de Django](#sintaxis-básica-de-django)
    
 4. [Estructura de un proyecto Django](#estructura-de-un-proyecto-django)
