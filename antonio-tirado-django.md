@@ -13,6 +13,7 @@ modified: '2023-11-21T11:43:33.791Z'
    
 2. [Características Clave de Django](#características-clave-de-django)   
 
+ 
   3. [Uso de Django](#uso-de-django)
      3.1 [Importancia de la Instalación Correcta](#importancia-de-la-instalación-correcta)
       3.1.1 [Linux](#linux)
